@@ -1,4 +1,4 @@
-API_KEY = "nandhini-honeypot-key"
+API_KEY = "7604997904321"
 
 DATABASE_URL = "sqlite:///./honeypot.db"  # easy now, PostgreSQL later
 SECRET_KEY = "super-secret-key"

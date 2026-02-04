@@ -1,7 +1,11 @@
-from config import SECRET_KEY
+from fastapi import Header, HTTPException
 
-def verify_user(username: str, password: str):
-    # demo auth (can be replaced with real DB later)
-    if username == "admin" and password == "admin123":
-        return True
-    return False
+API_KEY = "7604997904321"   
+
+def verify_api_key(x_api_key: str = Header(None)):
+    if x_api_key != API_KEY:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid or missing API Key"
+        )
+    return True
