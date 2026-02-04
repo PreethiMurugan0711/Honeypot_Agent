@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cyber Honeypot Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/cyber-theme.css">
+</head>
+<body>
+
+<div class="navbar">🛡 Agentic Honeypot – Cyber Security Dashboard</div>
+
+<div class="container">
+  <textarea id="msg" placeholder="Paste suspicious message here..."></textarea>
+  <button onclick="analyze()">Analyze Scam</button>
+
+  <div class="result">
+    <p><b>Agent Reply:</b> <span id="reply"></span></p>
+    <p><b>Scam Type:</b> <span id="type"></span></p>
+    <p><b>Keywords:</b> <span id="keywords"></span></p>
+    <p><b>Confidence:</b> <span id="confidence"></span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="animations/hoverEffects.js"></script>
+</body>
+</html>
