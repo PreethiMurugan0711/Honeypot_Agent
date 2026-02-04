@@ -42,8 +42,11 @@ async def honeypot(body: HoneypotBody, x_api_key: str = Header(None)):
     # ✅ Tester-safe fallback
     session_id = body.sessionId or "test-session"
 
-    if body.message and isinstance(body.message, dict):
+  # Handle both tester-style and final-style body
+    if isinstance(body.message, dict):
         text = body.message.get("text", "")
+    elif isinstance(body.message, str):
+        text = body.message
     else:
         text = ""
 
